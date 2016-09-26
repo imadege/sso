@@ -27,7 +27,10 @@ class FbLoginController extends  Controller{
     public function fb_login(){
 
        // echo env('FACEBOOK_REDIRECT_URL');
-        return redirect($this->fb->getLoginUrl(['email']));
+       /* $this->fb->getRedirectLoginHelper()
+            ->getLoginUrl(app('url')->to('facebook/callback'), ['email']);*/
+       echo app('url')->to('facebook/callback'); exit;
+        //return redirect($this->fb->getLoginUrl(['email']));
     }
 
     /**
