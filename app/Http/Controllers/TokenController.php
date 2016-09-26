@@ -56,7 +56,9 @@ public function auth_token(Request $request)
 
             if ($user) {
                 //let generate tokens
-                $token = JWTAuth::fromUser($user);
+                $customClaims = ['ud' => $user->uid, 'email' => $user->email,'permmissions'=>[]];
+
+                $token = JWTAuth::fromUser($user,$customClaims);
                 return response()->json(compact('token'));
             } else {
                 $respoonse["Message"] = "Failed Auth ";

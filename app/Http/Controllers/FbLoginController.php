@@ -25,6 +25,8 @@ class FbLoginController extends  Controller{
      * Redirect the user to Facebook to perform a login.
      */
     public function fb_login(){
+
+       // echo env('FACEBOOK_REDIRECT_URL');
         return redirect($this->fb->getLoginUrl(['email']));
     }
 
@@ -156,7 +158,7 @@ class FbLoginController extends  Controller{
             return Redirect::intended('/reporter/' . Auth::user()->uid)
                 ->withCookie(Cookie::make('user_cookie', $user_data,60000));
         }*/
-
+        echo "we are here";exit;
     }
 
     public function disconnect_fb(){

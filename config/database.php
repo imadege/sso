@@ -45,20 +45,20 @@ return array(
             'driver' => 'mongodb',
             'host' => '127.0.0.1',
             //getenv('MONGO_HOST'),
-            'port' => 27017,
+            'port' => env('DB_PORT'),
             'username' => '',
             'password' => '',
-            'database' => 'hivisasa',
+            'database' => env('DB_DATABASE'),
             //'options' => getenv('MONGO_OPTIONS')
         ),
         'mongodb2' => array(
             'driver' => 'mongodb',
             'host' => '127.0.0.1',
             //getenv('MONGO_HOST'),
-            'port' => 27017,
+            'port' => env('DB_PORT'),
             'username' => '',
             'password' => '',
-            'database' => 'hivisasa',
+            'database' => env('DB_DATABASE'),
             //'options' => getenv('MONGO_OPTIONS')
         ),
         'mongodb3' => array(
