@@ -39,14 +39,14 @@ class FbLoginController extends  Controller{
      */
     public function fb_login_complete(){
 
-       /* try {
+        try {
             $token = $this->fb->getAccessTokenFromRedirect();
         } catch (\Facebook\Exceptions\FacebookSDKException $e) {
             dd($e->getMessage());
             exit;
-        }*/
+        }
 
-/*        $token = $this->fb->getTokenFromRedirect();
+        $token = $this->fb->getTokenFromRedirect();
 
         if ( ! $token)
         {
@@ -61,7 +61,7 @@ class FbLoginController extends  Controller{
         $facebook_user = $this->fb->object('me')->fields('id','name','email','first_name','last_name')->get();
 
         $userdata = json_decode($facebook_user,true);
-        return response($userdata,200);*/
+        return response($userdata,200);
 
  /*       $facebook_email = $userdata['email'];
 
